@@ -16,4 +16,3 @@ console.log("The text between 3 and 10 index is:",text.slice(3,10));
 document.write("The text between 3 and 10 index is: ",text.slice(3,10));
 
 //print the substring
-console.log("The substring of the text is: ",text.substring(1,4));
