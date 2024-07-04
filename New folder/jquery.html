@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src ="jqueryMin.js"></script>
+</head>
+<style>
+    .description{
+        display: none;
+    }
+
+    .accordion{
+        background-color: black;
+        color: aliceblue;
+        width: 200px;
+    }
+</style>
+<body>
+    <form id="myForm">
+        <h1>Jquery Practice</h1>
+        <input name="name" type="text" id="txt1">
+        <input name="email" type="text" id="txt2">
+
+       <button type="submit" id="btn1">Click Me</button>
+
+       
+    
+    </form>
+    <p>Simple according</p>
+       <div class="accordion">
+        <div class="header">Title</div>
+        <div class="description">
+            This is description for the accordion .
+        </div>
+       </div>
+    <p id="p1"> This is a paragraph.</p>
+    <script>
+        $(document).ready(function(){
+            //showing the according description
+            $(".header").click(function(){
+                // $(".description").slideToggle()
+                $(".description").slideToggle()
+            })
+            $("#btn1").mouseenter(function(){
+                $("#p1").show();
+            });
+            $("#btn1").mouseleave(function(){
+                $("#p1").hide();
+            });
+            $("#txt1").keyup(function(){
+                $("#p1").text($(this).val());
+            });
+            $("#myForm").submit(function(){
+              alert("form submit")
+            });
+        });
+    </script>
+</body>
+</html>
